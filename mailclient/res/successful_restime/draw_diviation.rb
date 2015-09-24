@@ -2,18 +2,16 @@
 
 $LOAD_PATH.unshift(File.expand_path('../../lib', __FILE__))
 
-Title = "Deviation"
+Title = "Successful_Login_Deviation"
 Xlable = "Number of User"
-Ylabel = "Average Login Time"
+Ylable = ""
 require "gnuplot"
 Gnuplot.open do |gp|
-  x, y, y2, y3 = [], [], [], []
-  data = File.read("./inputfile")
+  x, y = [], []
+  data = File.read("./inputfile_dv")
   data.each_line do |line|
     x << line.chomp.split(",")[0]
-    y << line.chomp.split(",")[1]
-    y2 << line.chomp.split(",")[2]
-    y3 << line.chomp.split(",")[3]
+    y << line.chomp.split(",")[1].to_i
   end
 
   Gnuplot::Plot.new( gp ) do |plot|
@@ -24,15 +22,7 @@ Gnuplot.open do |gp|
     plot.xlabel Xlable
     plot.data << Gnuplot::DataSet.new( [x, y] ) do |ds|
       ds.with = "linespoints"
-      ds.notitle
-    end
-    plot.data << Gnuplot::DataSet.new( [x, y2] ) do |ds|
-      ds.with = "linespoints"
-      ds.notitle
-    end
-    plot.data << Gnuplot::DataSet.new( [x, y3] ) do |ds|
-      ds.with = "linespoints"
-      ds.notitle
+      ds.title = "Deviation"
     end
   end
 end
