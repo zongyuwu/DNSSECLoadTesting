@@ -2,10 +2,11 @@
 
 $LOAD_PATH.unshift(File.expand_path('../../lib', __FILE__))
 
-Title = "Ramp_Up_Successful_Login"
+Title = "Ramp_Up_Successful_Login_Deviation"
 Xlable = "Number of User"
-Ylable = "Times (ms)"
+Ylable = "Deviation"
 require "gnuplot"
+
 Gnuplot.open do |gp|
   x_60, y_60 = [], []
   x_120, y_120 = [], []
@@ -17,18 +18,15 @@ Gnuplot.open do |gp|
     case target[1]
     when "60"
       x_60 << target[0] #user
-      y_60 << target[2].to_i #login time
+      y_60 << target[3].to_i #login time
     when "120"
       x_120 << target[0]
-      y_120 << target[2].to_i #login time
+      y_120 << target[3].to_i #login time
     when "180"
       x_180 << target[0]
-      y_180 << target[2].to_i
+      y_180 << target[3].to_i
     end
   end
-
-  p x_180
-
 
   Gnuplot::Plot.new( gp ) do |plot|
     plot.terminal "gif"
