@@ -1,4 +1,4 @@
-# DNSSEC SERVER TESTING SCRIPT
+# DNSSEC LOAD TESTING SCRIPT or BINARY
 
-**TEST**  
-For those temporary testing script  
+  **FILE**
+  * dnsperf.rb : Script to run dnsperf easily and I will log the used conf to ./dnsperf.log
