@@ -27,6 +27,8 @@ Gnuplot.open do |gp|
     end
   end
 
+  p x_180
+
 
   Gnuplot::Plot.new( gp ) do |plot|
     plot.terminal "gif"
@@ -36,14 +38,15 @@ Gnuplot.open do |gp|
     plot.xlabel Xlable
     plot.data << Gnuplot::DataSet.new( [x_60, y_60] ) do |ds|
       ds.with = "linespoints"
-      ds.title = "Average Login Time"
+      ds.title = "Ramp up time = 60"
     end
     plot.data << Gnuplot::DataSet.new( [x_120, y_120] ) do |ds|
       ds.with = "linespoints"
-      ds.title = "Average Login Time"
+      ds.title = "Ramp up time = 120"
     end
     plot.data << Gnuplot::DataSet.new( [x_180, y_180] ) do |ds|
       ds.with = "linespoints"
-      ds.title = "Average Login Time"
+      ds.title = "Ramp up time = 180"
+    end
   end
 end
