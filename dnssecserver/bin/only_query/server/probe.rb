@@ -2,10 +2,9 @@
 
 class Usage_Probe
   def initialize
-    #@@target = "named"
-    @@target = "Xorg"
+    @@target = "named"
     @@period = 0.001
-    @@totall = 100
+    @@totall = 1000
     @CPU_usage = []
     @MEM_usage = [] 
   end
