@@ -47,21 +47,22 @@ end
 
 class Query < ARGVParser
   def initialize
-    format = "dnsperf -s #{IP} -d #{@@options[:d]} -n #{@@options[:N]} -Q #{@@options[:Q]} -c #{@@options[:Q]} -vD"
-    output = "../../../res/only_query/report_#{@@options[:Q]}.txt"
+    @format = "dnsperf -s #{IP} -d #{@@options[:d]} -n #{@@options[:N]} -Q #{@@options[:Q]} -c #{@@options[:Q]} -vD"
+    #@format = "dnsperf -s #{IP} -d #{@@options[:d]} -n #{@@options[:N]} -Q #{@@options[:Q]} -vD"
+    @output = "../../../res/only_query/report_#{@@options[:Q]}.txt"
   end
 
   def writeformat
-    File.open(output, "w") { |f| f.write(format) }
+    File.open(@output, "w") { |f| f.write(@format) }
   end
 
   def query
-    `#{format} >> #{output}`
+    File.delete @output if File.exist? @output
+    `#{@format} >> #{@output}`
   end
 end
 
 
 opts = ARGVParser.new
 q = Query.new
-q.writeformat
 q.query
