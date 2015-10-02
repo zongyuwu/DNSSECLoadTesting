@@ -47,7 +47,7 @@ end
 
 class Query < ARGVParser
   def initialize
-    @format = "dnsperf -s #{IP} -d #{@@options[:d]} -n #{@@options[:N]} -Q #{@@options[:Q]} -c #{@@options[:Q]} -vD"
+    @format = "dnsperf -s #{IP} -d #{@@options[:d]} -n #{@@options[:N]} -Q #{@@options[:Q]} -c 100 -vD"
     #@format = "dnsperf -s #{IP} -d #{@@options[:d]} -n #{@@options[:N]} -Q #{@@options[:Q]} -vD"
     @output = "../../../res/only_query/report_#{@@options[:Q]}.txt"
   end
