@@ -41,5 +41,5 @@ end
 q = Dnsperf_Query.new
 q.randomquery_arr(10000)
 q.query_type("CERT")
-p q.query_arr
+#p q.query_arr
 q.query_arr_to_file("../test/test_1001")
