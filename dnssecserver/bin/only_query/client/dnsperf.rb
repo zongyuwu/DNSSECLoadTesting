@@ -63,6 +63,7 @@ class Query < ARGVParser
 end
 
 
+`ruby ./gen_payload.rb`
 opts = ARGVParser.new
 q = Query.new
 q.query
