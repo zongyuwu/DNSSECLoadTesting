@@ -4,7 +4,7 @@ class Usage_Probe
   def initialize
     @@target = "named"
     @@period = 0.001
-    @@totall = 500
+    @@totall = 100
     @CPU_usage = []
     @MEM_usage = [] 
   end
