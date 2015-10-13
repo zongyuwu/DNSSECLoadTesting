@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 
-path = "../../../res/mix/server_500_10_10_mem"
+path = "../../../res/mix/server_200_10_10_cpu"
 sum = 0.0
 i = 0
 File.open(path, "r").each_line do |line|
