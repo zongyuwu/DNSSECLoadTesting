@@ -1,12 +1,12 @@
 #!/usr/bin/env ruby
 
-RT = "0.01"
+RT = "0.05"
 
 class Usage_Probe
   def initialize
     @@target = "named"
     @@period = 0.001
-    @@totall = 1000
+    @@totall = 3000
     @CPU_usage = []
     @MEM_usage = [] 
   end
