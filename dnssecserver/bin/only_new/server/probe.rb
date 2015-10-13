@@ -1,6 +1,10 @@
 #!/usr/bin/env ruby
 
+<<<<<<< HEAD
 RT = "0.1"
+=======
+RT = "0.5"
+>>>>>>> 97f7971431e78cd74a6cb0fc0fc6d86605cc7506
 
 class Usage_Probe
   def initialize
