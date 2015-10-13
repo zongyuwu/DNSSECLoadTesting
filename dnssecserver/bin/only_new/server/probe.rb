@@ -1,10 +1,12 @@
 #!/usr/bin/env ruby
 
+RT = "0.05"
+
 class Usage_Probe
   def initialize
     @@target = "named"
     @@period = 0.001
-    @@totall = 1000
+    @@totall = 3000
     @CPU_usage = []
     @MEM_usage = [] 
   end
@@ -33,8 +35,8 @@ class Usage_Probe
   end
 
   def draw filetodraw
-    draw_core("CPU", "#{filetodraw}_CPU_0.05.gif")
-    draw_core("MEM", "#{filetodraw}_MEM_0.05.gif")
+    draw_core("CPU", "#{filetodraw}_CPU_#{RT}.gif")
+    draw_core("MEM", "#{filetodraw}_MEM_#{RT}.gif")
   end
 
 private
@@ -82,6 +84,6 @@ end
 prb = Usage_Probe.new
 prb.probe
 puts "done probing"
-prb.write_cpu_res "../../../res/only_new/server_0.05_cpu"
-prb.write_mem_res "../../../res/only_new/server_0.05_mem"
+prb.write_cpu_res "../../../res/only_new/server_#{RT}_cpu"
+prb.write_mem_res "../../../res/only_new/server_#{RT}_mem"
 prb.draw "../../../res/only_new/server"
