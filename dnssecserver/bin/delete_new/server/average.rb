@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 
-path = "../../../res/only_new/server_0.00_mem"
+path = "../../../res/delete_new/server_0.1_mem_mem"
 sum = 0.0
 i = 0
 File.open(path, "r").each_line do |line|
