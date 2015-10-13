@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-RT = "100_20_20"
+RT = "500_10_10"
 
 class Usage_Probe
   def initialize
