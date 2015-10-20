@@ -48,6 +48,7 @@ end
 class Query < ARGVParser
   def initialize
     @format = "dnsperf -s #{IP} -d #{@@options[:d]} -n #{@@options[:N]} -Q #{@@options[:Q]} -c 100 -vuD"
+    p @format
     #@format = "dnsperf -s #{IP} -d #{@@options[:d]} -n #{@@options[:N]} -Q #{@@options[:Q]} -vD"
     @output = "../../../res/only_new/report_#{@@options[:Q]}.txt"
   end
@@ -63,7 +64,7 @@ class Query < ARGVParser
 end
 
 
-#`ruby ./gen_payload.rb`
+`ruby ./gen_payload.rb`
 opts = ARGVParser.new
 q = Query.new
 q.query
