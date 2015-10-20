@@ -1,0 +1,123 @@
+DNS Performance Testing Tool
+Nominum Version 2.0.0.0
+
+[Status] Command line: dnsperf -s 192.168.1.253 -d test_add_1020 -n 100 -Q 100 -c 100 -vuD
+[Status] Sending updates (to 192.168.1.253)
+[Status] Started at: Tue Oct 20 09:40:23 2015
+[Status] Stopping after 100 runs through file
+> NOERROR example.com 0.386699
+> NOERROR example.com 0.386984
+> NOERROR example.com 0.386889
+> NOERROR example.com 0.386804
+> NOERROR example.com 0.386895
+> NOERROR example.com 0.387029
+> NOERROR example.com 0.386817
+> NOERROR example.com 0.386800
+> NOERROR example.com 0.386932
+> NOERROR example.com 0.387046
+> NOERROR example.com 0.387369
+> NOERROR example.com 0.386763
+> NOERROR example.com 0.387181
+> NOERROR example.com 0.386116
+> NOERROR example.com 0.386276
+> NOERROR example.com 0.385986
+> NOERROR example.com 0.386499
+> NOERROR example.com 0.386724
+> NOERROR example.com 0.386429
+> NOERROR example.com 0.386635
+> NOERROR example.com 0.386143
+> NOERROR example.com 0.387620
+> NOERROR example.com 0.386076
+> NOERROR example.com 0.386035
+> NOERROR example.com 0.386459
+> NOERROR example.com 0.386774
+> NOERROR example.com 0.386386
+> NOERROR example.com 0.386614
+> NOERROR example.com 0.386719
+> NOERROR example.com 0.386314
+> NOERROR example.com 0.386315
+> NOERROR example.com 0.386238
+> NOERROR example.com 0.386506
+> NOERROR example.com 0.386376
+> NOERROR example.com 0.386289
+> NOERROR example.com 0.386386
+> NOERROR example.com 0.386507
+> NOERROR example.com 0.386024
+> NOERROR example.com 0.386144
+> NOERROR example.com 0.386016
+> NOERROR example.com 0.386038
+> NOERROR example.com 0.385961
+> NOERROR example.com 0.386003
+> NOERROR example.com 0.386232
+> NOERROR example.com 0.386829
+> NOERROR example.com 0.386341
+> NOERROR example.com 0.386455
+> NOERROR example.com 0.386415
+> NOERROR example.com 0.386414
+> NOERROR example.com 0.386460
+> NOERROR example.com 0.386577
+> NOERROR example.com 0.386681
+> NOERROR example.com 0.386594
+> NOERROR example.com 0.386655
+> NOERROR example.com 0.386690
+> NOERROR example.com 0.386735
+> NOERROR example.com 0.386847
+> NOERROR example.com 0.387009
+> NOERROR example.com 0.386921
+> NOERROR example.com 0.387000
+> NOERROR example.com 0.386570
+> NOERROR example.com 0.386676
+> NOERROR example.com 0.386593
+> NOERROR example.com 0.386895
+> NOERROR example.com 0.386805
+> NOERROR example.com 0.386869
+> NOERROR example.com 0.386923
+> NOERROR example.com 0.387024
+> NOERROR example.com 0.386949
+> NOERROR example.com 0.387177
+> NOERROR example.com 0.387098
+> NOERROR example.com 0.387164
+> NOERROR example.com 0.387222
+> NOERROR example.com 0.387332
+> NOERROR example.com 0.387251
+> NOERROR example.com 0.387431
+> NOERROR example.com 0.387548
+> NOERROR example.com 0.387536
+> NOERROR example.com 0.387578
+> NOERROR example.com 0.387700
+> NOERROR example.com 0.387611
+> NOERROR example.com 0.387717
+> NOERROR example.com 0.386004
+> NOERROR example.com 0.386109
+> NOERROR example.com 0.385995
+> NOERROR example.com 0.386066
+> NOERROR example.com 0.386060
+> NOERROR example.com 0.386172
+> NOERROR example.com 0.386295
+> NOERROR example.com 0.386299
+> NOERROR example.com 0.386383
+> NOERROR example.com 0.386400
+> NOERROR example.com 0.386529
+> NOERROR example.com 0.386532
+> NOERROR example.com 0.386652
+> NOERROR example.com 0.386589
+> NOERROR example.com 0.386098
+> NOERROR example.com 0.386235
+> NOERROR example.com 0.386265
+> NOERROR example.com 0.386244
+[Status] Testing complete (end of file)
+
+Statistics:
+
+  Updates sent:         100
+  Updates completed:    100 (100.00%)
+  Updates lost:         0 (0.00%)
+
+  Response codes:       NOERROR 100 (100.00%)
+  Average packet size:  request 946, response 40
+  Run time (s):         1.000317
+  Updates per second:   99.968310
+
+  Average Latency (s):  0.386642 (min 38.664267, max 38.664267)
+  Latency StdDev (s):   0.000452
+
