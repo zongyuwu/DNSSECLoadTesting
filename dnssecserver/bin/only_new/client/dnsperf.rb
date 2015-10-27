@@ -2,7 +2,7 @@
 
 
 IP = "192.168.1.253"
-RT = 0.05 #ramp up time
+RT = 0.1 #ramp up time
 
 res = ""
 1000.times do |i|
