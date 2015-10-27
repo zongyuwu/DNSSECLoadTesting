@@ -4,7 +4,7 @@ class Usage_Probe
   def initialize
     @@target = "named"
     @@period = 0.001
-    @@totall = 2000
+    @@totall = 1000
     @CPU_usage = []
     @MEM_usage = [] 
   end
@@ -33,8 +33,8 @@ class Usage_Probe
   end
 
   def draw filetodraw
-    draw_core("CPU", "#{filetodraw}_CPU.gif")
-    draw_core("MEM", "#{filetodraw}_MEM.gif")
+    draw_core("CPU", "#{filetodraw}_CPU_0.05.gif")
+    draw_core("MEM", "#{filetodraw}_MEM_0.05.gif")
   end
 
 private
@@ -82,6 +82,6 @@ end
 prb = Usage_Probe.new
 prb.probe
 puts "done probing"
-prb.write_cpu_res "../../../res/only_new/server"
-prb.write_mem_res "../../../res/only_new/server"
+prb.write_cpu_res "../../../res/only_new/server_0.05_cpu"
+prb.write_mem_res "../../../res/only_new/server_0.05_mem"
 prb.draw "../../../res/only_new/server"
