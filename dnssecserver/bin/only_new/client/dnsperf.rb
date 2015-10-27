@@ -2,6 +2,7 @@
 
 
 IP = "192.168.1.253"
+RT = 0.01 #ramp up time
 
 res = ""
 1000.times do |i|
@@ -9,6 +10,7 @@ res = ""
   cmd = "dnsperf -s #{IP} -d test_add_1027 -uvD"
   t = `#{cmd}`
   res = "#{res}#{t}"
+  sleep(RT)
 end
 
-puts res
+File.open("../../../res/only_new/client_#{RT}", "w") { |f| f.write(res) }
