@@ -1,3 +1,0 @@
-DNS Performance Testing Tool
-Nominum Version 2.0.0.0
-
