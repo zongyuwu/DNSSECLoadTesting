@@ -1,10 +1,6 @@
 #!/usr/bin/env ruby
 
-<<<<<<< HEAD
-RT = "0.1"
-=======
-RT = "0.5"
->>>>>>> 97f7971431e78cd74a6cb0fc0fc6d86605cc7506
+RT = "0.0"
 
 class Usage_Probe
   def initialize
@@ -88,6 +84,6 @@ end
 prb = Usage_Probe.new
 prb.probe
 puts "done probing"
-prb.write_cpu_res "../../../res/only_new/server_#{RT}_cpu"
-prb.write_mem_res "../../../res/only_new/server_#{RT}_mem"
-prb.draw "../../../res/only_new/server"
+prb.write_cpu_res "../../../res/delete_new/server_#{RT}_cpu"
+prb.write_mem_res "../../../res/delete_new/server_#{RT}_mem"
+prb.draw "../../../res/delete_new/server"
