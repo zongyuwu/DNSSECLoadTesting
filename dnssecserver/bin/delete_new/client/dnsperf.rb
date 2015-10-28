@@ -13,4 +13,4 @@ res = ""
   sleep(RT)
 end
 
-#File.open("../../../res/only_new/client_#{RT}", "w") { |f| f.write(res) }
+File.open("../../../res/delete_new/client_#{RT}", "w") { |f| f.write(res) }
