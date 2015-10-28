@@ -39,6 +39,6 @@ class Nsupdate_New
 end
 
 u = Nsupdate_New.new
-u.randomnew_arr(4)
+u.randomnew_arr(1)
 u.to_add_format
 u.query_arr_to_file("./test_add_1027")
