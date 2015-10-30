@@ -5,7 +5,7 @@ require 'timeout'
 
 IP = "192.168.1.253"
 UN_s = 0.1
-FREQ = 500
+FREQ = 200
 
 $FLAG = true
 
