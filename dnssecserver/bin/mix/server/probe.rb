@@ -1,12 +1,12 @@
 #!/usr/bin/env ruby
 
-RT = "0.1"
+RT = "100_10_10"
 
 class Usage_Probe
   def initialize
     @@target = "named"
     @@period = 0.001
-    @@totall = 3000
+    @@totall = 1000
     @CPU_usage = []
     @MEM_usage = [] 
   end
@@ -84,6 +84,6 @@ end
 prb = Usage_Probe.new
 prb.probe
 puts "done probing"
-prb.write_cpu_res "../../../res/delete_new/server_#{RT}_cpu"
-prb.write_mem_res "../../../res/delete_new/server_#{RT}_mem"
-prb.draw "../../../res/delete_new/server"
+prb.write_cpu_res "../../../res/mix/server_#{RT}"
+prb.write_mem_res "../../../res/mix/server_#{RT}"
+prb.draw "../../../res/mix/server"
