@@ -20,7 +20,7 @@ def setup_update_new
 end
 
 def query
-  Timeout::timeout(10) do
+  Timeout::timeout(180) do
     begin
       loop do 
         setup_query
@@ -34,7 +34,7 @@ def query
 end
 
 def update_new
-  Timeout::timeout(10) do
+  Timeout::timeout(180) do
     begin
       loop do 
         setup_update_new
