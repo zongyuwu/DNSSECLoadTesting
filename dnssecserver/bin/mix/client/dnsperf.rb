@@ -4,8 +4,8 @@ require 'timeout'
 
 
 IP = "192.168.1.253"
-UN_s = 0.05
-FREQ = 100
+UN_s = 0.1
+FREQ = 500
 
 $FLAG = true
 
