@@ -20,23 +20,32 @@ def setup_update_new
 end
 
 def query
-  begin
-    setup_query
-    cmd = "dnsperf -s #{IP} -d inputfile_query -Q #{FREQ} -D"
-    `#{cmd}`
-  end until $FLAG == false
+  Timeout::timeout(10) do
+    begin
+      loop do 
+        setup_query
+        puts "quering"
+        cmd = "dnsperf -s #{IP} -d inputfile_query -Q #{FREQ} -D"
+        `#{cmd}`
+      end
+    rescue
+    end
+  end
 end
 
 def update_new
-  Timeout::timeout(120) do
+  Timeout::timeout(10) do
     begin
-      setup_update_new
-      cmd1 = "dnsperf -s #{IP} -d inputfile_update -uD"
-      `#{cmd1}`
-      cmd2 = "dnsperf -s #{IP} -d inputfile_new -uD"
-      `#{cmd2}`
+      loop do 
+        setup_update_new
+        puts "updating"
+        cmd1 = "dnsperf -s #{IP} -d inputfile_update -uD"
+        `#{cmd1}`
+        cmd2 = "dnsperf -s #{IP} -d inputfile_new -uD"
+        `#{cmd2}`
+        sleep(UN_s)
+      end
     rescue
-      $FLAG = false
     end
   end
 end
